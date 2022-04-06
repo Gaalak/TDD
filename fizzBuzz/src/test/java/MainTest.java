@@ -6,38 +6,33 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MainTest {
 
-    @Test
-    public void shouldReturnOne() {
-        String result = Main.fizzBuzz(1);
-        assertEquals("1", result);
+    @ParameterizedTest
+    @ValueSource(ints = {1,2,4})
+    public void should_return_number_when_is_not_fizz_or_buzz(Integer nb) {
+        String result = Main.fizzBuzz(nb);
+        assertEquals(nb.toString(), result);
     }
 
-    @Test
-    public void shouldReturnTwo() {
-        String result = Main.fizzBuzz(2);
-        assertEquals("2", result);
-    }
 
-    @Test
-    public void shouldReturnFizzWhenParameterIsMultipleOfThree() {
-        String result = Main.fizzBuzz(3);
+
+    @ParameterizedTest
+    @ValueSource(ints = {3,6,9})
+    public void should_return_fizz_when_parameter_is_multiple_of_three(Integer nb) {
+        String result = Main.fizzBuzz(nb);
         assertEquals("fizz", result);
-
-        String result6 = Main.fizzBuzz(6);
-        assertEquals("fizz", result6);
     }
 
 
     @ParameterizedTest
     @ValueSource(ints = {5, 10, 15})
-    public void shouldReturnBuzzWhenParameterIsMultipleOfFive(Integer nb) {
+    public void should_return_buzz_when_parameter_is_multiple_of_five(Integer nb) {
         String result5 = Main.fizzBuzz(nb);
         assertTrue(result5.contains("buzz"));
 
     }
 
     @Test
-    public void shouldReturnFizzbuzzWhenParameterIsMultipleOfFiveAndThree() {
+    public void should_return_fizzbuzz_when_parameter_is_multiple_of_three_and_five() {
         String result = Main.fizzBuzz(15);
         assertEquals("fizzbuzz", result);
     }
