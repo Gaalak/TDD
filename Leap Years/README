@@ -1,9 +1,19 @@
 Années bissextiles
 Ce Kata court et simple doit être exécuté par paires en utilisant le Test Driven Development (TDD).
 
-Avant 1582, le calendrier julien était largement utilisé et définissait les années bissextiles comme chaque année divisible par 4. Cependant, il a été constaté à la fin du XVIe siècle que l'année civile s'était éloignée de l'année solaire d'environ 10 jours. Le calendrier grégorien a été défini afin de réduire le nombre d'années bissextiles et d'aligner plus étroitement l'année civile sur l'année solaire. Il a été adopté dans les pays pontificaux le 15 octobre 1582, sautant 10 jours à partir de la date du calendrier julien. Les pays protestants ont adopté le calendrier grégorien après un certain temps.
+Avant 1582, le calendrier julien était largement utilisé et définissait les années bissextiles comme chaque année divisible par 4.
 
-Le calendrier grégorien est assez précis, mais pourrait être rendu plus précis en ajoutant une règle supplémentaire qui élimine les années divisibles par 4000 comme années bissextiles. Mais je suppose que nous traverserons ce pont quand nous y arriverons. Envisagez d'ajouter cette règle en tant que deuxième histoire en tant que prolongement de l'exercice.
+Cependant, il a été constaté à la fin du XVIe siècle que l'année civile s'était éloignée de l'année solaire d'environ 10 jours.
+
+Le calendrier grégorien a été défini afin de réduire le nombre d'années bissextiles et d'aligner plus étroitement l'année civile sur l'année solaire.
+
+Il a été adopté dans les pays pontificaux le 15 octobre 1582, sautant 10 jours à partir de la date du calendrier julien.
+
+Les pays protestants ont adopté le calendrier grégorien après un certain temps.
+
+Le calendrier grégorien est assez précis, mais pourrait être rendu plus précis en ajoutant une règle supplémentaire qui élimine les années divisibles par 4000 comme années bissextiles.
+
+Mais je suppose que nous traverserons ce pont quand nous y arriverons. Envisagez d'ajouter cette règle en tant que deuxième histoire en tant que prolongement de l'exercice.
 
 Histoire de l'utilisateur:
 
