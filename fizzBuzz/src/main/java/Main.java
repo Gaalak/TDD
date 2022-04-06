@@ -1,3 +1,5 @@
+import java.util.stream.IntStream;
+
 public class Main {
 
     public static void main(String[] args){
@@ -5,6 +7,8 @@ public class Main {
         for (int i = 0; i < 101; i++) {
             System.out.println(fizzBuzz(i));
         }
+
+        IntStream.range(0,101).mapToObj(Main::fizzBuzz).forEach(System.out::println);
     }
 
     public static String fizzBuzz (Integer nb){
