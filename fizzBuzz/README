@@ -1,0 +1,3 @@
+Nous allons créer un kata qui est tout simplement un exercice que nous aidera à perfectionner notre compétence à travers la pratique et la répétition. Le kata que nous allons utiliser est le FizzBuzz qui est tout simple.
+
+L’objectif consiste de faire une boucle de 1 à 100 ou plus et que chaque chiffre qui est divisible par 3 il faut afficher le mot Fizz, si le chiffre et dévissable par 5 on affiche Buzz, par contre si le chiffre est dévissable par 3 et par 5 il faut afficher FizzBuzz sinon on affiche le chiffre.
