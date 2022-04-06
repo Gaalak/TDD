@@ -3,12 +3,11 @@ import java.util.stream.IntStream;
 public class Main {
 
     public static void main(String[] args){
+        //IntStream.range(0,101).mapToObj(Main::fizzBuzz).forEach(System.out::println);
         System.out.println("Hello world!");
         for (int i = 0; i < 101; i++) {
             System.out.println(fizzBuzz(i));
         }
-
-        IntStream.range(0,101).mapToObj(Main::fizzBuzz).forEach(System.out::println);
     }
 
     public static String fizzBuzz (Integer nb){
