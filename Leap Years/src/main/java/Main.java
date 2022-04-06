@@ -5,7 +5,10 @@ public class Main {
 
         System.out.println("Hello world!");
         for (int i = 0; i < 2022; i++) {
-            System.out.println(anneeBissextile(i));
+            Boolean retour = anneeBissextile(i).contains(" est");
+            if (retour.booleanValue()){
+                System.out.println(anneeBissextile(i));
+            }
         }
     }
 
@@ -24,6 +27,7 @@ public class Main {
         if (nb % 4 != 0){
             stringBuilder.append("L'année "+nb+" n'est pas bissextile");
         }
+
         return stringBuilder.toString();
     }
 }
