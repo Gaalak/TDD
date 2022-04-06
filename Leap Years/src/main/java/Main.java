@@ -5,8 +5,8 @@ public class Main {
 
         System.out.println("Hello world!");
         for (int i = 0; i < 2022; i++) {
-            Boolean retour = anneeBissextile(i).contains(" est");
-            if (retour.booleanValue()){
+            boolean retour = anneeBissextile(i).contains(" est");
+            if (retour){
                 System.out.println(anneeBissextile(i));
             }
         }
