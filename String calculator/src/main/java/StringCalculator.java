@@ -2,20 +2,21 @@ import java.util.regex.Pattern;
 
 public class StringCalculator {
     int add(String numbers) {
-        String[] rowValues = numbers.split(",");
+        String numbersWithoutLine = numbers.replaceAll("\n", ",");
+        String[] rowValues = numbersWithoutLine.split(",");
         int lengthValue = rowValues.length;
+        int i = 0;
+        int nb = 0;
         if (numbers.contains(",")) {
             if (Pattern.compile("A").matcher(numbers).find()) {
-                 throw new RuntimeException(numbers);
+            throw new RuntimeException(numbers);
             } else {
-                for (int i = 0; i < lengthValue; i++) {
-                    int nb = Integer.parseInt(rowValues[i]);
-                    System.out.println(i);
-                    System.out.println(lengthValue);
-                    nb += nb;
-                    return nb;
+                for (i = 0; i < lengthValue; i++) {
+
+                    nb += Integer.parseInt(rowValues[i].trim());
 
                 }
+                return nb;
             }
         } else if (!numbers.equals(" ")) {
             return Integer.parseInt(numbers);

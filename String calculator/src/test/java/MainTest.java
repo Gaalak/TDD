@@ -77,4 +77,22 @@ public class MainTest {
         Assertions.assertEquals(811, result);
     }
 
+    @ParameterizedTest
+    @ValueSource(strings = {"    430,231,    20   ,560"})
+    public void should_return_sum_of_atleast_four_multiple_digit_and_spaces(String number) {
+        int result = stringCalculator.add(number);
+        Assertions.assertEquals(1241, result);
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"1\n2,3"})
+    public void should_return_sum_of_multiple_digit_and_newline(String number) {
+        int result = stringCalculator.add(number);
+        Assertions.assertEquals(6, result);
+    }
+
+
+
+
+
 }
