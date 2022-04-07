@@ -70,4 +70,11 @@ public class MainTest {
         Assertions.assertEquals("A,20",thrown.getMessage());
     }
 
+    @ParameterizedTest
+    @ValueSource(strings = {"231,20,560"})
+    public void should_return_sum_of_atleast_three_multiple_digit(String number) {
+        int result = stringCalculator.add(number);
+        Assertions.assertEquals(811, result);
+    }
+
 }
