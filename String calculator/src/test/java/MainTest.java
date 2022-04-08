@@ -64,10 +64,10 @@ public class MainTest {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {"A,20"})
+    @ValueSource(strings = {"C,B,20"})
     public void should_return_sum_of_multiple_coma_multiple_digit(String number) {
         RuntimeException thrown = Assertions.assertThrows(RuntimeException.class, () -> stringCalculator.add(number));
-        Assertions.assertEquals("A,20",thrown.getMessage());
+        Assertions.assertEquals("C,B,20",thrown.getMessage());
     }
 
     @ParameterizedTest
@@ -91,8 +91,12 @@ public class MainTest {
         Assertions.assertEquals(6, result);
     }
 
-
-
+    @ParameterizedTest
+    @ValueSource(strings = {";\n5;6"})
+    public void should_return_sum_of_multiple_digit_and_newline_with_new_delimiter(String number) {
+        int result = stringCalculator.add(number);
+        Assertions.assertEquals(11, result);
+    }
 
 
 }
