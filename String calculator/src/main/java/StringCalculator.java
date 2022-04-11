@@ -2,7 +2,7 @@ import java.util.regex.Pattern;
 
 public class StringCalculator {
     int add(String numbers) {
-        String numbersWithoutLine = numbers.replace(";","\n").replace("\n", ",");
+        String numbersWithoutLine = numbers.replace("\n", ",");
         String[] rowValues = numbersWithoutLine.split(",");
         int lengthValue = rowValues.length;
         int i = 0;
