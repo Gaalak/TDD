@@ -98,5 +98,29 @@ public class MainTest {
         Assertions.assertEquals(11, result);
     }
 
+    @ParameterizedTest
+    @ValueSource(strings = {"coucou\n5coucou6"})
+    public void should_return_sum_of_multiple_digit_and_newline_with_new_delimiter_Coucou(String number) {
+        int result = stringCalculator.add(number);
+        Assertions.assertEquals(11, result);
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"cE89\n5cE896"})
+    public void should_return_sum_of_multiple_digit_and_newline_with_new_delimiter_random_char(String number) {
+        int result = stringCalculator.add(number);
+        Assertions.assertEquals(11, result);
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"56\n5566"})
+    public void should_return_sum_of_multiple_digit_and_newline_with_new_delimiter_same_number(String number) {
+        int result = stringCalculator.add(number);
+        Assertions.assertEquals(11, result);
+    }
+
+
+
+
 
 }
