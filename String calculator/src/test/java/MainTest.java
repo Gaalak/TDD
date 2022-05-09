@@ -113,13 +113,18 @@ public class MainTest {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {"56\n5566"})
+    @ValueSource(strings = {"56\n556656"})
     public void should_return_sum_of_multiple_digit_and_newline_with_new_delimiter_same_number(String number) {
         int result = stringCalculator.add(number);
         Assertions.assertEquals(11, result);
     }
 
-
+    @ParameterizedTest
+    @ValueSource(strings = {"tesTe4\n5tesTe46"})
+    public void should_return_sum_of_multiple_digit_and_newline_with_new_delimiter_and_negative_number(String number) {
+        int result = stringCalculator.add(number);
+        Assertions.assertEquals(11, result);
+    }
 
 
 
