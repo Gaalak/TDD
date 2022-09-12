@@ -5,6 +5,8 @@ public class Voiture {
     boolean automatique; //False par défaut
     String couleur; // null par défaut
     char premiereLettrePlaque; ///u0000 par défaut
+    int rapportCourant;
+
 
 
 }

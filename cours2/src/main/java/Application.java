@@ -3,9 +3,6 @@ public class Application {
         public static void main(String[] args) {
 
             Voiture voitureDeMichel = new Voiture();
-            voitureDeMichel.nbPortes = 3;
-            voitureDeMichel.automatique = true;
-            voitureDeMichel.couleur = "Vert";
 
             System.out.println(voitureDeMichel.couleur);
 
@@ -28,6 +25,29 @@ public class Application {
 
             voitureDeMichel.nbPortes = 1;
             System.out.println(AffichageVoiture.printPorteAndAutomatique(voitureDeMichel, "Michel"));
+
+            System.out.println(AffichageVoiture.printColorAndProprietaire(voitureDeJerome,"Jerome"));
+
+            if (voitureDeJerome == null){
+                System.out.println("la couleur est bien null");
+            }
+
+            ActionVoiture action = new ActionVoiture();
+
+            System.out.println(action.accelerer());
+            int vitesse = action.accelerer();
+
+            action.passerRapport(true,voitureDeJerome);
+            action.passerRapport(true,voitureDeJerome);
+            action.passerRapport(false,voitureDeJerome);
+            int nouveauRapport = action.passerRapport(true,voitureDeJerome);
+
+            System.out.println("le nouveau rapport est " + nouveauRapport);
+
+
+
+
+
 
 
 

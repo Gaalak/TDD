@@ -1,5 +1,6 @@
 public class AffichageVoiture {
 
+
     public static String printVoiture(final Voiture test, final String nomProprietaire){
 
         return "Voiture{" +
@@ -31,6 +32,10 @@ public class AffichageVoiture {
     }
 
     private static boolean isMultiplePortes(final int numberPorte) {
-        return numberPorte > 1; 
+        return numberPorte > 1;
+    }
+
+    public static String printColorAndProprietaire (final Voiture couleur,final String nomProprietaire){
+        return "La voiture de " + nomProprietaire + " est de couleur " + couleur.couleur;
     }
 }
