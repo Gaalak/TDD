@@ -44,6 +44,12 @@ public class Application {
 
             System.out.println("le nouveau rapport est " + nouveauRapport);
 
+            //action.tournerVoiture(true,90);
+            action.tournerVoiture(false,90);
+            action.tournerVoiture(true,190);
+            action.tournerVoiture(true,-180);
+
+
 
 
 

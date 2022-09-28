@@ -36,7 +36,17 @@ public class ActionVoiture {
         return voiture.rapportCourant;
     }
 
-    public void tourner(boolean droite, int angle){
-        System.out.println("La voiture va tourner à " + (droite ? "droite" : "gauche"));
+    public void tournerVoiture(boolean tourner, int angle){
+        if (tourner){
+            if (angle < 0) {
+                System.out.println("La voiture va tourner à gauche");
+            } else if (angle >= 180 && angle < 359){
+                System.out.println("La voiture va faire demi-tour");
+            }else {
+                System.out.println("La voiture va tourner à droite");
+            }
+        } else {
+            System.out.println("La voiture va continuer tout droit");
+        }
     }
 }
