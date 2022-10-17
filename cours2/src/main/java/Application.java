@@ -49,13 +49,15 @@ public class Application {
             action.tournerVoiture(true,190);
             action.tournerVoiture(true,-180);
 
+            Voiture voituredeJerome = new Voiture();
+            Moteur moteur = new Moteur();
+            moteur.carburation = "Diesel";
+            moteur.nbCylindres = 5;
 
+            System.out.println("vroum => "+moteur);
+            voituredeJerome.moteur = moteur;
 
-
-
-
-
-
+            System.out.println(AffichageVoiture.printVoiture(voituredeJerome,"Jerome"));
 
 
 //        boolean jeContinue = true;

@@ -6,6 +6,7 @@ public class Voiture {
     String couleur; // null par défaut
     char premiereLettrePlaque; ///u0000 par défaut
     int rapportCourant;
+    Moteur moteur;
 
 
 

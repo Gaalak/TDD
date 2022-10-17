@@ -4,11 +4,13 @@ public class AffichageVoiture {
     public static String printVoiture(final Voiture test, final String nomProprietaire){
 
         return "Voiture{" +
-                "nbPorte=" + test.nbPortes +
-                ", automatique=" + test.automatique +
-                ", couleur='" + test.couleur + '\'' +
-                ", premiereLettrePlaque=" + test.premiereLettrePlaque +
-                "Nom du popriétaire =" + nomProprietaire +
+                "nbPorte = " + test.nbPortes +
+                ", automatique = " + test.automatique +
+                ", couleur= '" + test.couleur + '\'' +
+                ", premiereLettrePlaque = " + test.premiereLettrePlaque +
+                ", Nom du popriétaire = " + nomProprietaire +
+                ", Carburation = " + (test.moteur != null ? test.moteur.carburation : "null")+
+                ", nombre de cylindre = " + (test.moteur != null ? test.moteur.nbCylindres : "null") +
                 '}';
     }
 
@@ -38,4 +40,6 @@ public class AffichageVoiture {
     public static String printColorAndProprietaire (final Voiture couleur,final String nomProprietaire){
         return "La voiture de " + nomProprietaire + " est de couleur " + couleur.couleur;
     }
+
+
 }
