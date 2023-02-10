@@ -2,9 +2,7 @@ public class ActionVoiture {
 
 
 
-    public void klaxonner(){
-        System.out.println("pimpon");
-    }
+
 
     public void avancer(){
 

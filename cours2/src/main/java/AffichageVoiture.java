@@ -29,8 +29,7 @@ public class AffichageVoiture {
         String nbPorte = test.nbPortes > 1 ? test.nbPortes + " portes" : test.nbPortes + " porte";
 
         return "La voiture de " + nomProprietaire + " a " + nbPrtStr +
-                " et est " + (test.automatique ? "automatique" : "manuel") +
-                '}';
+                " et est " + (test.automatique ? "automatique" : "manuel") ;
     }
 
     private static boolean isMultiplePortes(final int numberPorte) {
