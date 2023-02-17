@@ -1,7 +1,9 @@
+import java.util.Scanner;
+
 public class Application {
 
         public static void main(String[] args) {
-            System.out.println("lol");
+//            System.out.println("lol");
 
 //            Voiture voitureDeMichel = new Voiture();
 //
@@ -87,6 +89,64 @@ public class Application {
 //                jeContinue = false;
 //            }
 //        }
+//            Scanner sc = new Scanner(System.in);
+//            String ligneSuivante = sc.next();
+//            System.out.println("La ligne suivante est " + ligneSuivante);
+//
+//            Integer ii = new Integer(45);
+//            int i = ii.intValue();
+//            System.out.println(i);
+//
+            Voiture tesla = new Voiture();
+            tesla.couleur = "Rouge";
+//            tesla.typeBoite = TypeBoiteVitesse.SEMI_AUTO;
+
+//            switch (tesla.typeBoite){
+//                case AUTO :
+//                    System.out.println("le type de boitier de ma telsa est automatique" );
+//                case MANUELLE :
+//                    System.out.println("le type de boitier de ma telsa est manuelle" );
+//                case SEMI_AUTO :
+//                    System.out.println("le type de boitier de ma telsa est semi automatique" );
+//                break;
+//            }
+//            System.out.println("Le type de ma boite de vitesse est "+ tesla.typeBoite.nomTypeBoite);
+//            System.out.println(tesla.typeBoite.ordinal());
+//            TypeBoiteVitesse semiAuto = TypeBoiteVitesse.valueOf("SEMI_AUTO");
+//            System.out.println("La boite récupérée par le biais de la chaine de caractère est " + semiAuto.nomTypeBoite);
+
+//            int[] tableauDeInt = new int[5];
+//            char[] tableauDeChar = new char[5];
+//            Voiture[] tableauDeVoitures = new Voiture[5];
+//
+//            tableauDeInt[1]=15;
+//            tableauDeInt[4]=12;
+//            System.out.println("Le deuxième élément du tableau entier est "+ tableauDeInt[1]);
+//            System.out.println("Le pemier élément du tableau entier est "+ tableauDeInt[0]);
+//
+//            tableauDeVoitures[0] = tesla;
+//            tableauDeVoitures[2] = new Voiture();
+//            System.out.println("La couleur du premier élément du tableau des voitures est "+ tableauDeVoitures[0].couleur);
+//            System.out.println("La taille du tableau de caractère est "+tableauDeChar.length);
+                Passager passager = new Passager();
+                passager.nomPassager = "Dupont";
+                Ville depart = new Ville();
+                depart.nomVille = "OAKLAND";
+
+                Ville etape1 = new Ville();
+                etape1.nomVille = "washington";
+
+                Ville etape2 = new Ville();
+                etape2.nomVille = "New York";
+
+                Ville etape3 = new Ville();
+                etape3.nomVille = "San Francisco";
+
+
+
+                tesla.transporter(passager,depart,etape1,etape2,etape3);
+
+
 
         }
 }

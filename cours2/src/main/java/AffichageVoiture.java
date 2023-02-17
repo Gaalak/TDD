@@ -5,7 +5,7 @@ public class AffichageVoiture {
 
         return "Voiture{" +
                 "nbPorte = " + test.nbPortes +
-                ", automatique = " + test.automatique +
+                ", automatique = " + test.typeBoite +
                 ", couleur= '" + test.couleur + '\'' +
                 ", premiereLettrePlaque = " + test.premiereLettrePlaque +
                 ", Nom du popriétaire = " + nomProprietaire +
@@ -29,7 +29,7 @@ public class AffichageVoiture {
         String nbPorte = test.nbPortes > 1 ? test.nbPortes + " portes" : test.nbPortes + " porte";
 
         return "La voiture de " + nomProprietaire + " a " + nbPrtStr +
-                " et est " + (test.automatique ? "automatique" : "manuel") ;
+                " et est " + (test.fonctionnel ? "fonctionnelle" : "hors service") ;
     }
 
     private static boolean isMultiplePortes(final int numberPorte) {
