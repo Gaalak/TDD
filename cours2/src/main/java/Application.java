@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Application {
 
@@ -146,6 +146,50 @@ public class Application {
 
                 tesla.transporter(passager,depart,etape1,etape2,etape3);
 
+                List list = new ArrayList();
+                list.add(etape1);
+                list.add(3);
+                list.add(etape1);
+
+                List<Ville> listVille = new ArrayList();
+                list.add(etape1);
+                list.add(etape2);
+                list.add(etape3);
+
+
+                //list.remove(etape1); Supprime le premier élément de l'objet
+                Ville o =(Ville)list.get(0);
+
+                System.out.println("La ville à l'index 0 est " +o.nomVille);
+
+            //Contrairement à une liste ,la collection ne peut contenir deux fois la même information. Le 3e ajout sera donc ignoré
+            Set<Ville> set = new HashSet<>();
+            set.add(etape3);
+            set.add(etape1);
+            set.add(etape2);
+            set.add(etape1);
+
+//            for (Ville suiteVille : set) {
+//                System.out.println(suiteVille.nomVille);
+//
+//            }
+
+            Iterator<Ville> vi = set.iterator();
+
+            while (vi.hasNext()){
+
+                Ville v = vi.next();
+                System.out.println(v.nomVille);
+            }
+//            System.out.println("La collection contient " + set.size() + " éléments");
+//            //Il faut transformer la collection en liste pour pouvoir récupérer un élément sur un index précis
+//            Ville ep = (Ville)set.toArray()[0];
+//            System.out.println(ep.nomVille);
+
+            Map<Integer,Ville> map = new HashMap();
+            map.put(1,etape1);
+
+            map.get(1);
 
 
         }
