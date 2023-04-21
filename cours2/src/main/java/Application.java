@@ -188,9 +188,37 @@ public class Application {
 
             Map<Integer,Ville> map = new HashMap();
             map.put(1,etape1);
+            map.put(2,etape3);
+            map.put(3,etape2);
 
-            map.get(1);
+            Ville tev = map.get(1);
+            System.out.println(tev.nomVille);
 
+            for (Map.Entry<Integer, Ville> entry : map.entrySet()) {
+                Integer varientry = entry.getKey();
+                Ville value = entry.getValue();
+                System.out.println("L'élément suivant a pour clef : " + varientry + ". Il s'agit de la ville nommé " + value.nomVille);
+            }
+
+            for (Integer key : map.keySet()){
+                System.out.println("L'élément suivant a pour clef : " + key);
+            }
+            for (Ville value : map.values()){
+                System.out.println("Il s'agit de la ville nommé : " + value.nomVille);
+            }
+
+            System.out.println("le nombre d'élément de la map est " + map.size());
+            System.out.println((map.isEmpty() ? "La map est vide" :"La map n'est pas vide"));
+            System.out.println(map.containsKey(1) ? "La map contient une clef à la première position" : "la map ne contient pas de clef");
+            System.out.println(map.containsValue(etape1) ? "Il y a Washington dans la map" : "Il n'y a pas Washington");
+
+            map.clear();
+            System.out.println((map.isEmpty() ? "La map est vide" :"La map n'est pas vide"));
+
+            Collections.replaceAll(list,etape1,etape2);
+            for(Ville str : set){
+                System.out.println(str.nomVille);
+            }
 
         }
 }
