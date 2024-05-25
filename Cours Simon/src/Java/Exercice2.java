@@ -34,7 +34,7 @@ public class Exercice2 {
         } else {
             for (int i = Totalminute; i > 59; i -= fullminute) {
                 counthour++;
-                Totalminute -= fullminute;
+                Totalminute %= fullminute;
             }
             Totalheure += counthour;
             if (Totalheure >= 23) {

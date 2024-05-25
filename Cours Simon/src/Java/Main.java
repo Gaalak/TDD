@@ -47,13 +47,23 @@ public class Main {
 //
 //        Integer[] pairArray = tab.pairArray();
 //        System.out.println(Arrays.toString(pairArray));
+//
+//        Exercice2 montresuisse = new Exercice2();
+//        System.out.println(montresuisse.getHour());
+//        montresuisse.addMinute(63);
+//        System.out.println(montresuisse.getHour());
+//        montresuisse.removeMinute(61);
+//        System.out.println(montresuisse.getHour());
+//        Oiseau oiseaux = new Oiseau();
+//        System.out.println(oiseaux.vitesse);
+//        System.out.println(oiseaux.poids);
+//        System.out.println(Arrays.toString(oiseaux.setlistoiseau()));
+//        System.out.println(oiseaux.getGagnant());
+         Employee richard = new Employee("alban","developpeur",32);
+        System.out.println(richard.descriptif());
 
-        Exercice2 montresuisse = new Exercice2();
-        System.out.println(montresuisse.getHour());
-        montresuisse.addMinute(60);
-        System.out.println(montresuisse.getHour());
-        montresuisse.removeMinute(61);
-        System.out.println(montresuisse.getHour());
+
+
 
 
     }
