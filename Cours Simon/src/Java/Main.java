@@ -2,13 +2,14 @@ package Java;
 
 import Java.Listinteger;
 
+import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Main {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 //         Listinteger listinteger = new Listinteger();
 //         listinteger.insertValue(30,0);
 //        listinteger.insertValue(15,1);
@@ -62,18 +63,22 @@ public class Main {
 //         Employee richard = new Employee("alban","developpeur",32);
 //        System.out.println(richard.descriptif());
 
-        Personne Yoann = new Personne(16,"Yoann",2);
+        Personne Yoann = new Personne(32,"Yoann",2);
+        Personne Lena = new Personne(3,"Lena",1);
 //        adult1.setAge(19);
 //        adult1.setnom("Stephanie");
 //        adult1.setNsecu(1);
-        Account livreta = new Account(Yoann);
-        System.out.println(Yoann.getAge());
+//        Account livretaYoann = new Account(Yoann);
+        Account comptecourantLena = new Account(Lena);
 //        System.out.println(livreta.);
 //        System.out.println(livreta.balance);
 //        System.out.println(livreta.getDecouvertAutorisePourLesAdultes());
-        System.out.println(livreta.depot(175));
-        System.out.println(livreta.retrait(3000));
-        System.out.println(livreta.getOperationLog());
+//        System.out.println(livretaYoann.depot(185));
+//        System.out.println(comptecourantLena.depot(185));
+//        System.out.println(livretaYoann.depot(125.425512));
+        System.out.println(comptecourantLena.getMontantActuelCompte());
+        System.out.println(comptecourantLena.retrait(2185.658));
+
     }
 
 
