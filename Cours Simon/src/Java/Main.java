@@ -59,13 +59,21 @@ public class Main {
 //        System.out.println(oiseaux.poids);
 //        System.out.println(Arrays.toString(oiseaux.setlistoiseau()));
 //        System.out.println(oiseaux.getGagnant());
-         Employee richard = new Employee("alban","developpeur",32);
-        System.out.println(richard.descriptif());
+//         Employee richard = new Employee("alban","developpeur",32);
+//        System.out.println(richard.descriptif());
 
-
-
-
-
+        Personne Yoann = new Personne(16,"Yoann",2);
+//        adult1.setAge(19);
+//        adult1.setnom("Stephanie");
+//        adult1.setNsecu(1);
+        Account livreta = new Account(Yoann);
+        System.out.println(Yoann.getAge());
+//        System.out.println(livreta.);
+//        System.out.println(livreta.balance);
+//        System.out.println(livreta.getDecouvertAutorisePourLesAdultes());
+        System.out.println(livreta.depot(175));
+        System.out.println(livreta.retrait(3000));
+        System.out.println(livreta.getOperationLog());
     }
 
 

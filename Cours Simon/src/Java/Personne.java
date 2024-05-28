@@ -2,24 +2,25 @@ package Java;
 
 public class Personne {
     //    Une Person a un âge, un nom, et un numéro de sécurité social.
-    private int age;
-    private String nom;
+    private static int age;
+    private static String nom;
     private int nsecu;
 
-    private Boolean proprietaire;
 
-    public Personne(int age,String nom,int nsecu) {
-        this.age = age;
-        this.nom = nom;
+    public Personne(int age, String nom, int nsecu) {
+        Personne.age = age;
+        Personne.nom = nom;
         this.nsecu = nsecu;
     }
 
-    public int getage() {
-        return this.age;
-    }
+    public Personne() {
 
-    public Boolean getProprietaire() {
-        return this.proprietaire;
+    }
+    public static int getAge() {
+        return age;
+    }
+    public static String getNom() {
+        return nom;
     }
 
 }
