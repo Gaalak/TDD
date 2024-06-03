@@ -1,10 +1,6 @@
 package Java;
 
-import Java.Listinteger;
-
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.Arrays;
 
 public class Main {
 
@@ -62,23 +58,27 @@ public class Main {
 //        System.out.println(oiseaux.getGagnant());
 //         Employee richard = new Employee("alban","developpeur",32);
 //        System.out.println(richard.descriptif());
-
-        Personne Yoann = new Personne(32,"Yoann",2);
-        Personne Lena = new Personne(3,"Lena",1);
+//
+//        Personne Yoann = new Personne(32,"Yoann",2);
+//        Personne Lena = new Personne(3,"Lena",1);
+//        Personne Stephanie = new Personne(30,"Stephanie",2);
 //        adult1.setAge(19);
 //        adult1.setnom("Stephanie");
 //        adult1.setNsecu(1);
-//        Account livretaYoann = new Account(Yoann);
-        Account comptecourantLena = new Account(Lena);
+        //Account livretaYoann = new Account(Yoann);
+        //Account comptecourantLena = new Account(Lena);
+//          Account comptecourantStephanie = new Account(Stephanie);
 //        System.out.println(livreta.);
 //        System.out.println(livreta.balance);
 //        System.out.println(livreta.getDecouvertAutorisePourLesAdultes());
 //        System.out.println(livretaYoann.depot(185));
-//        System.out.println(comptecourantLena.depot(185));
-//        System.out.println(livretaYoann.depot(125.425512));
-        System.out.println(comptecourantLena.getMontantActuelCompte());
-        System.out.println(comptecourantLena.retrait(2185.658));
-
+        //System.out.println(comptecourantLena.depot(185));
+        //System.out.println(livretaYoann.depot(125.425512));
+//        System.out.println(comptecourantLena.getMontantActuelCompte());
+//        System.out.println(comptecourantLena.retrait(2185.658));
+//        System.out.println(comptecourantStephanie.getMontantActuelCompte());
+//        System.out.println(comptecourantStephanie.depot(10000));
+//        System.out.println(comptecourantStephanie.retrait(100000));
     }
 
 

@@ -6,9 +6,7 @@ public class Employee {
     private String poste;
     private int age;
 
-    //ctrl + alt + L -> beautifull code
-    //alt + entrée -> choix dispo
-//shift + bas -> multi sélection
+
     public Employee(String name, String poste, int age) {
 
         this.name = name;

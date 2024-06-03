@@ -19,28 +19,29 @@ public class Account {
 //    hauteur de 100 euros par année supérieure à 17 ans
 //    À chaque fois qu’une action est entreprise sur le compte, que ce soit un retrait, ou un
 //    dépôt, cette dernière doit être conservé sur le compte, et datée.
-    private double balance = 400;
+    private double balance = 400;//bigdecimal
     private boolean permis;
     private String operation;
-    private final String dateoperation = new SimpleDateFormat("yyyy/MM/dd à HH:mm").format(Calendar.getInstance().getTime());
+    private final String dateoperation = new SimpleDateFormat("yyyy/MM/dd à HH:mm").format(Calendar.getInstance().getTime());//datetimeformater
 
+    private Personne owner;
     DecimalFormat df = new DecimalFormat("0.00");
 
     public Account(Personne proprietairecompte) {
-
+        this.owner =proprietairecompte;
     }
 
     public String getMontantActuelCompte() {
         return df.format(this.balance) + "€";
     }
 
-    private Boolean verificationPossibiliteRetrait(double sommedesire) {
+    private boolean verificationPossibiliteRetrait(double sommedesire) {
         double resultoperation = balance - sommedesire;
-        if (Personne.getAge() < 18 && resultoperation < 0) {
+        if (owner.getAge() < 18 && resultoperation < 0) {
 
             return permis;
         }
-        if (Personne.getAge() > 18 && resultoperation < 0) {
+        if (owner.getAge() > 18 && resultoperation < 0) {
             resultoperation = sommedesire - balance;
             if (resultoperation <= getDecouvertAutorisePourLesAdultes()) {
                 permis = true;
@@ -53,7 +54,7 @@ public class Account {
     }
 
     private int getDecouvertAutorisePourLesAdultes() {
-        return (Personne.getAge() - 17) * 100;
+        return (owner.getAge() - 17) * 100;//eviter des magic numbers
     }
 
     public String retrait(double sommedesire) {
@@ -78,7 +79,7 @@ public class Account {
     private void getOperationLog() {
 
         StringBuilder logoperation = new StringBuilder()
-                .append(Personne.getNom())
+                .append(owner.getNom())
                 .append(" a demandé à effectuer un ")
                 .append(operation)
                 .append(" qui a été ")
