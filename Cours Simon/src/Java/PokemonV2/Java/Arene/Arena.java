@@ -1,24 +1,31 @@
 package Java.PokemonV2.Java.Arene;
 
 import Java.PokemonV2.Enum.TypeEnum;
-import Java.PokemonV2.Java.Attack.Attack;
 
 import java.util.List;
 
-import static Java.PokemonV2.Enum.TypeEnum.FIRE;
-import static Java.PokemonV2.Enum.TypeEnum.GRASS;
+import static Java.PokemonV2.Enum.TypeEnum.*;
 
-public class Parc {
+public class Arena {
 
     private final String name;
-    private List<TypeEnum> typefield;
+    private final List<TypeEnum> typefield;
 
-    public final static Parc JARDINDACCLIMATATION = new Parc("Les jardins d'acclimatations", List.of(GRASS));
+    public final static Arena ACCLIMATATIONGARDEN = new Arena("Les jardins d'acclimatations", List.of(GRASS));
+    public final static Arena VESUVE = new Arena("Vésuve", List.of(FIRE));
+    public final static Arena OLYMPICPOOL = new Arena("Les jardins d'acclimatations", List.of(WATER));
 
 
-
-    public Parc(String name, List<TypeEnum> typefield) {
+    public Arena(String name, List<TypeEnum> typefield) {
         this.name = name;
         this.typefield = typefield;
+    }
+
+    public List<TypeEnum> getTypefield() {
+        return typefield;
+    }
+
+    public String getName() {
+        return name;
     }
 }

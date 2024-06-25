@@ -1,4 +1,4 @@
-package Java.Pokemon.Java;
+package Java.PokemonDEGUEULASSE.Java;
 
 public class Arene {
 

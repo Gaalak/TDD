@@ -1,2 +1,5 @@
-package Java.PokemonDEGUEULASSE.Enum;public class PokemonType {
+package Java.PokemonDEGUEULASSE.Enum;
+
+public enum PokemonType {
+    WATER
 }

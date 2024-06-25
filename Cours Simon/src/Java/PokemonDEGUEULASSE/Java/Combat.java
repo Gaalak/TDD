@@ -1,6 +1,6 @@
-package Java.Pokemon.Java;
+package Java.PokemonDEGUEULASSE.Java;
 
-import Java.Pokemon.Enum.typeEnum;
+import Java.PokemonDEGUEULASSE.Enum.typeEnum;
 
 public class Combat {
 

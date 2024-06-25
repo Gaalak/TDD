@@ -1,8 +1,5 @@
-package Java.Pokemon.Enum;
-import Java.Pokemon.Enum.typeEnum;
-import Java.Pokemon.Java.Pokemon;
+package Java.PokemonDEGUEULASSE.Enum;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public enum attaqueEnum {
@@ -28,23 +25,14 @@ enum AttackType {
     this.strongAgainst = strongAgainst;
     }
 
-
     public List<PokemonType> getStrongAgainst() {
         return strongAgainst;
     }
 }
 
-enum PokemonType {
-    WATER
-}
-
-
-
-
 enum Days {
     MONDAY(6, 0),
     TUESDAY(5, 6);
-
 
     private final int daysBeforeSunday;
     private final int daysBeforeMonday;
@@ -57,7 +45,6 @@ enum Days {
     public int getDaysBeforeSunday() {
         return daysBeforeSunday;
     }
-
 
     public int getDifferenceBetweenBEFOREmONDAYaND() {
         return this.daysBeforeMonday - this.daysBeforeSunday;

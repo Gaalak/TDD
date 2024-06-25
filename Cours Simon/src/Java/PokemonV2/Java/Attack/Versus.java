@@ -1,31 +1,49 @@
 package Java.PokemonV2.Java.Attack;
 
-import Java.PokemonV2.Enum.AttackEnum;
+import Java.PokemonV2.Java.Arene.Arena;
 import Java.PokemonV2.Java.Pokemon.Pokemon;
 
-public class Attack {
+import java.util.Random;
 
-    private Pokemon Defendpokemon = new Pokemon("e");
+public class Versus {
 
-    private AttackEnum pokemonattack;
-    public int doAttack(Pokemon pokemon) {
-        this.Defendpokemon = pokemon;
-        if (Defendpokemon.weakagainstindex == pokemonattack.getAttackType()){
-            resultdamage = this.Defendpokemon.getHealthPoint()- (pokemonattack.getDamage()*2);
+    private Attack randomattack;
+
+    private double resultdamage;
+
+    private double resultlifepoint;
+
+    private final Multipier Multiplier = new Multipier();
+
+
+
+
+    public void doAttack(Pokemon attackpokemon, Pokemon defendpokemon) {
+        Random txreussite = new Random();
+        int chance = txreussite.nextInt(5);
+        randomattack = getRandomAttackFromAttackPokemonList(attackpokemon);
+        if (randomattack.isUltiAttack()) {
+            System.out.println(randomattack.getName());
+            if (chance == 4) {
+                System.out.println("L'attaque " + attackpokemon + " a échoué. Le pokemon " + defendpokemon + " n'a subit aucun dégât.");
+                return;
+            }
+            double finalmulti = Multiplier.getFinalMultiplier(randomattack, defendpokemon);
+            resultdamage = randomattack.getDamage() * finalmulti;
+            resultlifepoint = (Pokemon.getHealthPoint() - resultdamage);
         }
-        if (Defendpokemon.strongagainstindex == pokemonattack.getAttackType()){
-            resultdamage = this.Defendpokemon.getHealthPoint()- (pokemonattack.getDamage()/2);
-        }
-        resultdamage = this.Defendpokemon.getHealthPoint()- (pokemonattack.getDamage());
-        System.out.println(pokemonattack);
-        System.out.println(Defendpokemon);
-        System.out.println(Defendpokemon.weakagainstindex);
-        System.out.println(pokemonattack.getAttackType());
-        System.out.println(pokemonattack.getDamage());
-        System.out.println(pokemon.getHealthPoint());
-        System.out.println(resultdamage);
-        return resultdamage;
-
-
+        double finalmulti = Multiplier.getFinalMultiplier(randomattack, defendpokemon);
+        resultdamage = randomattack.getDamage() * finalmulti;
+        resultlifepoint = (Pokemon.getHealthPoint() - resultdamage);
+        System.out.println(chance);
+        System.out.println("L'attaque " + randomattack + " a réussit. Elle a infligé "+resultdamage+ " dommages. Il reste " + resultlifepoint + "pdv à " + defendpokemon);
     }
+
+    private Attack getRandomAttackFromAttackPokemonList(Pokemon attackpokemon){
+        final Random attackrandom = new Random();
+        randomattack = attackpokemon.getPokemonattacksFromType().get(attackrandom.nextInt(attackpokemon.getPokemonattacksFromType().size()));
+
+        return randomattack;
+    }
+
 }

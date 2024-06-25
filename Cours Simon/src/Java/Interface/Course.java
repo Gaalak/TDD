@@ -1,2 +1,4 @@
-package Java.Interface;public class Course {
+package Java.Interface;
+
+public class Course {
 }

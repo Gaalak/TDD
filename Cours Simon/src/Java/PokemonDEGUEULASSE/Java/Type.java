@@ -1,10 +1,4 @@
-package Java.Pokemon.Java;
-
-import Java.Pokemon.Enum.typeEnum;
-import Java.Pokemon.Enum.attaqueEnum;
-
-import java.util.ArrayList;
-import java.util.List;
+package Java.PokemonDEGUEULASSE.Java;
 
 public class Type {
 

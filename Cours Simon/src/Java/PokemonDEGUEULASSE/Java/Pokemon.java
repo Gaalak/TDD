@@ -1,6 +1,6 @@
-package Java.Pokemon.Java;
+package Java.PokemonDEGUEULASSE.Java;
 
-import Java.Pokemon.Enum.typeEnum;
+import Java.PokemonDEGUEULASSE.Enum.typeEnum;
 
 //Développer un combat de Pokémon.
 //Un pokémon possède un type, deux attaques, et des points de vie.

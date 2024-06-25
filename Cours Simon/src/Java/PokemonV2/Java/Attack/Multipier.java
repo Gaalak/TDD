@@ -1,27 +1,53 @@
 package Java.PokemonV2.Java.Attack;
 
+import Java.PokemonV2.Enum.TypeEnum;
+import Java.PokemonV2.Java.Arene.Arena;
 import Java.PokemonV2.Java.Pokemon.Pokemon;
 
-public class Multipicator {
+import java.util.HashSet;
+import java.util.List;
 
-    public Multipicator(){
+public class Multipier {
 
+    private double multiplierValue;
+    private double finalMultiplierValue;
+
+
+    public double getFinalMultiplier(Attack attackpokemon, Pokemon defendpokemon) {
+        List<TypeEnum> defendpokemontypes = defendpokemon.getTypelist();
+        if (new HashSet<>(attackpokemon.getAttackType().getStrongAgainst()).containsAll(defendpokemontypes)) {
+            System.out.println(attackpokemon.getAttackType());
+            System.out.println(defendpokemontypes);
+            finalMultiplierValue = 2;
+        }
+        if (new HashSet<>(attackpokemon.getAttackType().getWeakAgainst()).containsAll(defendpokemontypes)) {
+            System.out.println(attackpokemon.getAttackType());
+            System.out.println(defendpokemontypes);
+            finalMultiplierValue = 0.5;
+        }
+        if (!new HashSet<>(attackpokemon.getAttackType().getWeakAgainst()).containsAll(defendpokemontypes) && !new HashSet<>(attackpokemon.getAttackType().getStrongAgainst()).containsAll(defendpokemontypes)) {
+            System.out.println(attackpokemon.getAttackType());
+            System.out.println(defendpokemontypes);
+            return finalMultiplierValue = 1;
+        }
+        System.out.println("multi "+finalMultiplierValue);
+        return finalMultiplierValue;
     }
 
-    public Number getMultiplicator(Pokemon pokemonattack, Pokemon defendpokemon){
-        Attack attack = new Attack();
-        pokemonattackattack.initAttack();
-              System.out.println("L'attaque " + pokemonattack + " a échoué. Le pokemon " + defendpokemon + " n'a subit aucun dégât.");
-                return "";}
-            if (pokemonattack.getAttackType().getStrongAgainst().contains(defendpokemontypes)) {
-                resultdamage = Math.max(defendpokemon.getHealthPoint() - (pokemonattack.getDamage() * 2), 0);
-            }
-            if (pokemonattack.getAttackType().getWeakAgainst().contains(defendpokemontypes)) {
-                resultdamage = Math.max(defendpokemon.getHealthPoint() - (pokemonattack.getDamage() / 2), 0);
-            }
-            if (!pokemonattack.getAttackType().getWeakAgainst().contains(defendpokemontypes) && !pokemonattack.getAttackType().getWeakAgainst().contains(defendpokemontypes)) {
-                resultdamage = Math.max(defendpokemon.getHealthPoint() - pokemonattack.getDamage(), 0);
-            }
-            System.out.println("L'attaque " + pokemonattack + " a réussit. Il reste " + resultdamage + "pdv à " + defendpokemon);
-            return "";
+//    public double getMultiplierPokemonInArena(Attack attackpokemon, Arena arena) {
+//        if (new HashSet<>(attackpokemon.getAttackType().getStrongAgainst()).containsAll(arena.getTypefield())) {
+//            System.out.println(attackpokemon.getAttackType());
+//            multiplierValue = 2;
+//        }
+//        if (new HashSet<>(attackpokemon.getAttackType().getWeakAgainst()).containsAll(arena.getTypefield())) {
+//            System.out.println(attackpokemon.getAttackType());
+//            multiplierValue = 0.5;
+//        }
+//        if (!new HashSet<>(attackpokemon.getAttackType().getWeakAgainst()).containsAll(arena.getTypefield()) && !new HashSet<>(attackpokemon.getAttackType().getStrongAgainst()).containsAll(arena.getTypefield())) {
+//            System.out.println(attackpokemon.getAttackType());
+//            multiplierValue = 1;
+//        }
+//        System.out.println("multi "+multiplierValue);
+//        return multiplierValue;
+//    }
 }

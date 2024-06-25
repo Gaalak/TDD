@@ -1,4 +1,4 @@
-package Java.Pokemon.Enum;
+package Java.PokemonDEGUEULASSE.Enum;
 
 public enum typeEnum {
         feu(1), eau(2), plante(3);

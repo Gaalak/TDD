@@ -1,9 +1,8 @@
-package Java.Pokemon.Java;
+package Java.PokemonDEGUEULASSE.Java;
 
 
-import Java.Pokemon.Enum.attaqueEnum;
-import Java.Pokemon.Enum.typeEnum;
-import Java.Pokemon.Java.Pokemon;
+import Java.PokemonDEGUEULASSE.Enum.attaqueEnum;
+import Java.PokemonDEGUEULASSE.Enum.typeEnum;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +17,6 @@ public class Attaque extends Type {
 
     public Attaque() {
         super();
-
     }
 
     public typeEnum getTypeAttaque(typeEnum typepokemon) {
@@ -52,7 +50,7 @@ public class Attaque extends Type {
 
     public void getAttaqueDuPokemon(String nom) {
         System.out.println("Voici les attaques de "+nom+" : ");
-        for (Java.Pokemon.Enum.attaqueEnum attaqueEnum : listeattaque) {
+        for (Java.PokemonDEGUEULASSE.Enum.attaqueEnum attaqueEnum : listeattaque) {
             System.out.println(attaqueEnum);
         }
 

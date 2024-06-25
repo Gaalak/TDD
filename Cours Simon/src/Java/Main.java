@@ -1,19 +1,23 @@
 package Java;
 
+import Java.PokemonDEGUEULASSE.Enum.typeEnum;
+import Java.PokemonDEGUEULASSE.Java.Combat;
+import Java.PokemonDEGUEULASSE.Java.Pokemon;
+
 import java.io.IOException;
 
 public class Main {
 
 
     public static void main(String[] args) throws IOException {
-//         Listinteger listinteger = new Listinteger();
-//         listinteger.insertValue(30,0);
+//        Listinteger listinteger = new Listinteger();
+//        listinteger.insertValue(30,0);
 //        listinteger.insertValue(15,1);
 //        listinteger.insertValue(20,2);
-//          listinteger.insertValue(30,3);
-//           listinteger.insertValue(30,4);
-//          listinteger.add(31);
-//          listinteger.add(2);
+//        listinteger.insertValue(30,3);
+//        listinteger.insertValue(30,4);
+//        listinteger.add(31);
+//        listinteger.add(2);
 //        listinteger.add(3);
 //        listinteger.add(4);
 //        System.out.println(Arrays.toString(listinteger.tab));
@@ -27,7 +31,7 @@ public class Main {
 //        Exercice1 tab = new Exercice1(e);
 //
 //        int valeurbasse = tab.getLowerNumber();
-////        System.out.println(tab.getError());
+//        System.out.println(tab.getError());
 //        System.out.println(valeurbasse);
 //
 //        int valeurhaute = tab.getUpperNumber();
@@ -56,7 +60,7 @@ public class Main {
 //        System.out.println(oiseaux.poids);
 //        System.out.println(Arrays.toString(oiseaux.setlistoiseau()));
 //        System.out.println(oiseaux.getGagnant());
-//         Employee richard = new Employee("alban","developpeur",32);
+//        Employee richard = new Employee("alban","developpeur",32);
 //        System.out.println(richard.descriptif());
 //
 //        Personne Yoann = new Personne(32,"Yoann",2);
@@ -65,21 +69,25 @@ public class Main {
 //        adult1.setAge(19);
 //        adult1.setnom("Stephanie");
 //        adult1.setNsecu(1);
-        //Account livretaYoann = new Account(Yoann);
-        //Account comptecourantLena = new Account(Lena);
-//          Account comptecourantStephanie = new Account(Stephanie);
+//        Account livretaYoann = new Account(Yoann);
+//        Account comptecourantLena = new Account(Lena);
+//        Account comptecourantStephanie = new Account(Stephanie);
 //        System.out.println(livreta.);
 //        System.out.println(livreta.balance);
 //        System.out.println(livreta.getDecouvertAutorisePourLesAdultes());
 //        System.out.println(livretaYoann.depot(185));
-        //System.out.println(comptecourantLena.depot(185));
-        //System.out.println(livretaYoann.depot(125.425512));
+//        System.out.println(comptecourantLena.depot(185));
+//        System.out.println(livretaYoann.depot(125.425512));
 //        System.out.println(comptecourantLena.getMontantActuelCompte());
 //        System.out.println(comptecourantLena.retrait(2185.658));
 //        System.out.println(comptecourantStephanie.getMontantActuelCompte());
 //        System.out.println(comptecourantStephanie.depot(10000));
 //        System.out.println(comptecourantStephanie.retrait(100000));
+//        Pokemon salameche = new Pokemon(typeEnum.feu,"salameche", 20);
+        Pokemon carapuce = new Pokemon(typeEnum.eau,"carapute",45);
+        Pokemon salameche = new Pokemon(typeEnum.feu,"salamecreant",45);
+        Combat combatclassique = new Combat(carapuce,salameche);
     }
 
-
 }
+
