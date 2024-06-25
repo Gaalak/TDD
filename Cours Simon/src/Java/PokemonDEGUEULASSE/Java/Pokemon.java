@@ -1,5 +1,7 @@
 package Java.Pokemon.Java;
 
+import Java.Pokemon.Enum.typeEnum;
+
 //Développer un combat de Pokémon.
 //Un pokémon possède un type, deux attaques, et des points de vie.
 //Une attaque cible un pokémon et lui retire deux points de vie à chaque fois.
@@ -10,13 +12,40 @@ package Java.Pokemon.Java;
 //  de la même manière que les résistances et les faiblesses du pokémon cible.
 //  Une attaque sur le bon terrain est doublée, et sur le mauvais, divisée par deux. Il est donc possible d’infliger jusqu’à huit dégâts
 //  (ou douze avec l'attaque moins précise mais qui inflige 1 de plus) par attaque mais une attaque ne peut pas infliger moins d’un dégât.
-public class Pokemon {
+public class Pokemon extends Type {
 
-    private int pointdevie;
-    private String Nom;
-    Type typePokemon;
+    private int pointdevie = 40;
+    private String nom;
 
-    public Pokemon(Type typePokemon) {
-        this.typePokemon = typePokemon;
+    private typeEnum typepokemon;
+
+    private typeEnum typeattaque;
+
+    public Pokemon(typeEnum typepokemon,String nom, int pointdevie) {
+        super();
+        Attaque attaquepokemon = new Attaque();
+        this.typepokemon = typepokemon;
+        this.nom = nom;
+        this.typeattaque = attaquepokemon.getTypeAttaque(this.typepokemon);
+        attaquepokemon.setAttaqueParType();
+        attaquepokemon.getAttaqueDuPokemon(this.nom);
+        this.pointdevie = pointdevie;
+
+    }
+
+    public typeEnum getTypePokemon() {
+        return typepokemon;
+    }
+
+    public String getNomPokemon() {
+        return nom;
+    }
+
+    public typeEnum getTypeattaque() {
+        return typeattaque;
+    }
+
+    public int getPointdevie() {
+        return pointdevie;
     }
 }
