@@ -9,10 +9,17 @@ package Java.Interface;
 //PS : Survis à ca.
 
 
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-
+//        Course course = new Course(30,new Dragon(300,500), new CaisseASavon(180,60),new Human(),new Pile());
+        Circuit mans = new Circuit(190,"Mans");
+        Dragon dragon = new Dragon("Gerard",11250,522);
+        CaisseASavon caisseASavon = new CaisseASavon("bolide",150,60);
+        Pile pile = new Pile("AAA",mans);
+        Human human = new Human("random");
+        Course course1 = new Course(mans, List.of(dragon, human, pile, caisseASavon));
     }
 }
