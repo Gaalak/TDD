@@ -1,4 +1,4 @@
-package Java;
+package Java.PremierPas;
 
 public class Employee {
 

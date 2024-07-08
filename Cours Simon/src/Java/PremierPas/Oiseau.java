@@ -1,4 +1,4 @@
-package Java;
+package Java.PremierPas;
 import java.util.Random;
 
 //Exercice3 --La course d'oiseau

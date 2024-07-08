@@ -1,4 +1,4 @@
-package Java;
+package Java.PremierPas;
 
 public class Personne {
     //    Une Person a un âge, un nom, et un numéro de sécurité social.

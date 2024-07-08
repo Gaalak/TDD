@@ -1,9 +1,8 @@
-package Java;
+package Java.PremierPas;
 
-import java.text.Format;
 import java.util.Arrays;
 
-import static Java.Listinteger.INITIAL_SIZE;
+import static Java.PremierPas.Listinteger.INITIAL_SIZE;
 
 public class Listintegerclass {
 

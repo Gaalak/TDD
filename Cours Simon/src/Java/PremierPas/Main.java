@@ -1,4 +1,4 @@
-package Java;
+package Java.PremierPas;
 
 import Java.PokemonDEGUEULASSE.Enum.typeEnum;
 import Java.PokemonDEGUEULASSE.Java.Combat;

@@ -1,4 +1,6 @@
-package Java;
+package Java.PremierPas;
+
+import Java.PremierPas.Personne;
 
 import java.io.*;
 import java.text.DecimalFormat;
