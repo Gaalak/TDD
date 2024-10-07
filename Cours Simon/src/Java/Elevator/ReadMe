@@ -1,0 +1,27 @@
+Réaliser un simulateur de déplacement d'ascenseur.
+
+Le logiciel doit pouvoir, à tout instant, indiquer la position de ses ascenseurs au sein d'une triple cage d'ascenseur.
+Le batiment possède 10 étages. Tous les ascenseurs commencent à un étage aléatoire
+Chaque étage possède un double bouton (UP, DOWN) pour chaque cage d'ascenseur (pour un total de 6 boutons donc)
+Un ascenseur monte ou descend à chaque tic, s'il est en déplacement vers un étage.
+A tout instant, on peut déclencher un tic, qui va mettre à jour la position de l'ensemble des ascenseurs en fonction de l'endroits où ils sont supposés se rendre.
+
+
+Les ascenseurs se déplacent comme suivant :
+Un ascenseur se déplace vers un étage s'il a été appelé à cet étage
+Un ascenseur se déplace vers un étage si un étage a été sélectionné à l'intérieur de l'ascenseur
+Un déplacement prioritaire est un déplacement que fera l'ascenseur avant de se rendre à d'autres endroits. Pour simplifier les choses, on peut dire qu'un ascenseur est en montée ou en descente. Lorsqu'un ascenseur a un déplacement prioritaire, il doit continuer à se déplacer dans la même direction jusqu'à avoir atteint le dernier appel qui lui a été adressé dans la direction indiquée, ou jusqu'à l'extrémité des étages.
+Cas :
+Si l'ascenseur est appelé à un étage par le bouton UP de cet étage
+Alors l'ascenseur qui arrive à l'étage est en montée (déplacement vers le haut prioritaire).
+Si l'ascenseur est appelé à un étage par le bouton DOWN de cet étage
+Alors l'ascenseur qui arrive à l'étage est en descente (déplacement vers le bas prioritaire).
+Si un ascenseur de déplace vers un étage par un appel interne (sélection d'étage), il n'est ni en montée, ni en descente.
+Modéliser ce système.
+Exposer des méthodes claires qui affectent le comportement des ascenseurs.
+
+Exemple de méthode attendue.
+Une méthode tower.callThirdElevatorUp(8) indique un appel de l'ascenseur 3 à l'étage 8 pour monter.
+Une méthode tower.askSecondElevatorToGoTo(4) indique une sélection de l'étage 4 dans l'ascenseur 2.
+tower.tic() pour actualiser la position de tous les ascenseurs.
+sout(tower) pour afficher la position des trois ascenseurs.

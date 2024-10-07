@@ -1,9 +1,9 @@
 
-package exo3;
+package Java.Abstraction;
 
 class Book {
-    private String header;
-    private Chapter[] chapters;
+    private final String header;
+    private final Chapter[] chapters;
     public Book(String header, Chapter[] chapters) {
         this.header = header;
         this.chapters = chapters;
@@ -15,5 +15,10 @@ class Book {
 
     public Chapter[] getChapters() {
         return chapters;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }

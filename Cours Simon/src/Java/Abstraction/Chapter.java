@@ -1,4 +1,4 @@
-package exo3;
+package Java.Abstraction;
 
 class Chapter {
     private String title;
@@ -15,5 +15,10 @@ class Chapter {
 
     public String getTitle() {
         return title;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }
