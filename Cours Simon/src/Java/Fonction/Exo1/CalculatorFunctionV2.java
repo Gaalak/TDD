@@ -7,23 +7,25 @@ public class CalculatorFunctionV2 {
     final String operator;
 
     public static void main(String[] args) {
-        CalculatorFunctionV2 addition = new CalculatorFunctionV2(1,10 , "+");
-        CalculatorFunctionV2 multiplication = new CalculatorFunctionV2(3,30 , "*");
-        CalculatorFunctionV2 division = new CalculatorFunctionV2(15,1 , "/");
+        Integer addition = new CalculatorFunctionV2("+")
+                .apply(1, 10);
+        Integer multiplication = new CalculatorFunctionV2("*")
+                .apply(3, 30);
+        Integer division = new CalculatorFunctionV2("/")
+                .apply(15, 1);
 
     }
     public CalculatorFunctionV2(int nb1, int nb2, String operator) {
         this.nb1 = nb1;
         this.nb2 = nb2;
         this.operator = operator;
-        System.out.println(calculate());
     }
 
-    private Integer calculate (){
+    private Operation calculate (String operator) {
         return switch (operator) {
-            case "+" -> new Addition().apply(nb1,nb2);
-            case "*" -> new Multiplication().apply(nb1,nb2);
-            case "/" -> new Division().apply(nb1,nb2);
+            case "+" -> new Addition();
+            case "*" -> new Multiplication();
+            case "/" -> new Division();
             default -> null;
         };
     }

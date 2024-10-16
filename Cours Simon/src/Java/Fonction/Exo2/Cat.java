@@ -20,13 +20,16 @@ public class Cat {
         cate.createAndValidateCat(new EqualsAgeAndJumpHeight());
         cate.createAndValidateCat(new OlderAndName());
     }
+
     public Cat(Integer age, String name, Integer jumpHeight) {
         this.age = age;
         this.name = name;
         this.jumpHeight = jumpHeight;
     }
 
-    public Cat createAndValidateCat(CatValidator cat){
+    public static Cat createAndValidateCat(CatValidator cat, int age, String name, int jump height){
+        // demande d'input ->
+        // scanner
         Cat chat1 = new Cat(this.age,this.name,this.jumpHeight);
         if(cat.test(chat1)) {
             System.out.println("bon Alban!");
