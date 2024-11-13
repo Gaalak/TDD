@@ -27,7 +27,7 @@ public class Cat {
         this.jumpHeight = jumpHeight;
     }
 
-    public static Cat createAndValidateCat(CatValidator cat, int age, String name, int jump height){
+    public Cat createAndValidateCat(CatValidator cat){
         // demande d'input ->
         // scanner
         Cat chat1 = new Cat(this.age,this.name,this.jumpHeight);
