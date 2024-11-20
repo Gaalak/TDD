@@ -1,4 +1,4 @@
-package Java.Stream.Exo1;
+package Java.Collections.Exo1;
 
 import java.util.Arrays;
 import java.util.Collections;
