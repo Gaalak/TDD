@@ -6,7 +6,7 @@ import java.util.*;
 public class Insect {
 
     private  String name;
-    private static Integer nbPaws;
+    private int nbPaws;
     private  String color;
 
 
@@ -43,6 +43,7 @@ public class Insect {
     public int hashCode() {
         return Objects.hash(name, nbPaws, color);
     }
+
 
 
 }
