@@ -45,5 +45,12 @@ public class Insect {
     }
 
 
-
+    @Override
+    public String toString() {
+        return "Insect{" +
+                "name='" + name + '\'' +
+                ", nbPaws=" + nbPaws +
+                ", color='" + color + '\'' +
+                '}';
+    }
 }

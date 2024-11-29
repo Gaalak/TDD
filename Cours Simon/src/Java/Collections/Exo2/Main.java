@@ -2,6 +2,7 @@ package Java.Collections.Exo2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -17,20 +18,31 @@ public class Main {
         Insect mouche = new Insect("mouche",3,"yellow");
         Insect moustique = new Insect("moustique",2,"red");
         Insect abeille = new Insect("abeille",6,"red");
-//        var insectListmaxpaws = Stream.of(coccinelle,ver,manteReligieuse,gendarme,araignee,mouche,moustique,abeille)
-//                .max(Insect::getNbPaws).map(Insect::getName);
-//        System.out.println(insectListmaxpaws);
-//        var insectListred = Stream.of(coccinelle, ver, manteReligieuse, gendarme, araignee, mouche, moustique, abeille)
-//                .filter(insect -> insect.getColor().equals("red")).map(Insect::getName).toList();
-//        System.out.println(insectListred);
-//        var insectListblueandsixpaws = Stream.of(coccinelle, ver, manteReligieuse, gendarme, araignee, mouche, moustique, abeille)
-//                .filter(insect -> insect.getColor().equals("blue")).filter(insect -> insect.getNbPaws() < 6).map(Insect::getName).toList();
-//        System.out.println(insectListblueandsixpaws);
-//         var countPaws = Stream.of(coccinelle, ver, manteReligieuse, gendarme, araignee, mouche, moustique, abeille)
-//                .mapToInt(Insect::getNbPaws).sum();
-//        System.out.println(countPaws);
-//        var countYellowInsect = Stream.of(coccinelle, ver, manteReligieuse, gendarme, araignee, mouche, moustique, abeille)
-//                .filter(insect -> insect.getColor().equals("yellow")).count();
-//        System.out.println(countYellowInsect);
+
+        List<Insect> listInsect = new ArrayList<>();
+        listInsect.add(coccinelle);
+        listInsect.add(ver);
+        listInsect.add(manteReligieuse);
+        listInsect.add(gendarme);
+        listInsect.add(araignee);
+        listInsect.add(mouche);
+        listInsect.add(moustique);
+        listInsect.add(abeille);
+
+        var insectListmaxpaws = listInsect.stream()
+                .max(Comparator.comparingInt(Insect::getNbPaws)).stream().toList();
+        System.out.println(insectListmaxpaws);
+        var insectListred = listInsect.stream()
+                .filter(insect -> insect.getColor().equals("red")).map(Insect::getName).toList();
+        System.out.println(insectListred);
+        var insectListblueandsixpaws = listInsect.stream()
+                .filter(insect -> insect.getColor().equals("blue")).filter(insect -> insect.getNbPaws() < 6).map(Insect::getName).toList();
+        System.out.println(insectListblueandsixpaws);
+         var countPaws = listInsect.stream()
+                .mapToInt(Insect::getNbPaws).sum();
+        System.out.println(countPaws);
+        var countYellowInsect = listInsect.stream()
+                .filter(insect -> insect.getColor().equals("yellow")).count();
+        System.out.println(countYellowInsect);
     }
 }

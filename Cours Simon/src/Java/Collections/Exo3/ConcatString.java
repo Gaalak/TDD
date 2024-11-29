@@ -2,12 +2,13 @@ package Java.Collections.Exo3;
 
 import java.util.Scanner;
 
+import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
 public class ConcatString {
 
-    public UnaryOperator<String> concat(String concatString){
+    public Function<String,String> concat(String concatString){
 
-        return ;
+        return name -> name + concatString;
     }
 }
